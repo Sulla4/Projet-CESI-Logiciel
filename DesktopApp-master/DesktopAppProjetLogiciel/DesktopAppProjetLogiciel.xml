@@ -1,0 +1,669 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DesktopAppProjetLogiciel</name>
+    </assembly>
+    <members>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.CityController.FindByIdAsync(System.Int32)">
+            <summary>
+            This method get an entity from table Cities in db
+            </summary>
+            <param name="id">cp of city to find</param>
+            <returns>Task with City found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.CityController.FindByCityName(System.String)">
+            <summary>
+            This method get an entity from table Cities in db with city name
+            </summary>
+            <param name="id">cp of city to find</param>
+            <returns>City found</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.CityController.ListCityCpAsync">
+            <summary>
+            This method list all entity from table Users in db
+            </summary>
+            <returns>Task with all city cp found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.CityController.ListCityNameAsync">
+            <summary>
+            This method list all entity from table Users in db
+            </summary>
+            <returns>Task with all city name found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.CityController.UpdateAndPostAsync(DesktopAppProjetLogiciel.Models.City,System.Int32)">
+            <summary>
+            This method update a city or create it if it don't exist
+            </summary>
+            <param name="city">city info to update or create</param>
+            <param name="cpCity">cp of city to update or 0 if it don't exist</param>
+            <returns>Task with a message because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.RoleController.ListAsync">
+            <summary>
+            This method list all entity from table Roles in db
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.RoleController.PostAsync(DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            This method create a role
+            </summary>
+            <param name="role">role info to create</param>
+            <returns>Task with a message because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.UserController.CheckLogin(System.String,System.String)">
+            <summary>
+            This method check if the user can connect to the app
+            </summary>
+            <param name="email">email of user</param>
+            <param name="password">password of user</param>
+            <returns>true if he is authorized and false if not</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.UserController.ListAsync">
+            <summary>
+            This method list all entity from table Users in db
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.UserController.FindByIdAsync(System.Int32)">
+            <summary>
+            This method get an entity from table Users in db
+            </summary>
+            <param name="id">id of user to find</param>
+            <returns>Task with User found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Controllers.UserController.UpdateAndPostAsync(DesktopAppProjetLogiciel.Models.User,System.Int32)">
+            <summary>
+            This method update a user or create it if it don't exist
+            </summary>
+            <param name="user">user info to update or create</param>
+            <param name="id">id of user to update or 0 if it don't exist</param>
+            <returns>Task with a message because it is asynchronous</returns>
+        </member>
+        <member name="F:DesktopAppProjetLogiciel.form1.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.form1.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.form1.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DesktopAppProjetLogiciel.Models.City">
+            <summary>
+            This class represent an entity from table Cities in db
+            </summary>
+        </member>
+        <member name="T:DesktopAppProjetLogiciel.Models.Role">
+            <summary>
+            This class represent an entity from table Roles in db
+            </summary>
+        </member>
+        <member name="T:DesktopAppProjetLogiciel.Models.User">
+            <summary>
+            This class represent an entity from table Users in db
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Contexts.AppDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            This method connect to the db
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Contexts.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            This method represent the schema of the db
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.ListAsyncWithTracking">
+            <summary>
+            This method list data from table Cities in db and track them
+            </summary>
+            <returns>Task with all data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.ListAsync">
+            <summary>
+            This method list data from table Cities in db
+            </summary>
+            <returns>Task with all data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.AddAsync(DesktopAppProjetLogiciel.Models.City)">
+            <summary>
+            This method create an entity from table Cities in db them
+            </summary>
+            <param name="city">city to create</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.FindByIdAsync(System.Int32)">
+            <summary>
+            This search data from table Cities in db with id
+            </summary>
+            <param name="id">cp of searched city</param>
+            <returns>Task with found data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.FindByCityName(System.String)">
+            <summary>
+            This search data from table Cities in db with city name
+            </summary>
+            <param name="cityName">city name of searched user</param>
+            <returns>List with all data return by the db</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.Update(DesktopAppProjetLogiciel.Models.City)">
+            <summary>
+            This method update an entity from table Cities in db them
+            </summary>
+            <param name="city">city to update</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.Remove(DesktopAppProjetLogiciel.Models.City)">
+            <summary>
+            This method remove an entity from table Cities in db
+            </summary>
+            <param name="city">city to delete</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.CityRepository.track(System.Collections.Generic.List{DesktopAppProjetLogiciel.Models.City})">
+            <summary>
+            This method track data from table Cities in db
+            </summary>
+            <param name="cities">List of City</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.RoleRepository.ListAsync">
+            <summary>
+            This method list data from table Roles in db and track them
+            </summary>
+            <returns>Task with all data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.RoleRepository.AddAsync(DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            This method create an entity from table Roles in db them
+            </summary>
+            <param name="role">role to create</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.RoleRepository.FindByIdAsync(System.String)">
+            <summary>
+            This search data from table Roles in db with id
+            </summary>
+            <param name="id">id of searched role</param>
+            <returns>Task with found data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.RoleRepository.Update(DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            This method update an entity from table Role in db them
+            </summary>
+            <param name="role">role to update</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.RoleRepository.Remove(DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            This method remove an entity from table Role in db
+            </summary>
+            <param name="role">role to delete</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UnitOfWork.DesktopAppProjetLogiciel#Repositories#IUnitOfWork#CompleteAsync">
+            <summary>
+            This method saves data into db
+            </summary>
+            <returns>Task to check method status because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.ListAsyncWithTracking">
+            <summary>
+            This method list data from table Users in db and track them
+            </summary>
+            <returns>Task with all data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.ListAsync">
+            <summary>
+            This method list data from table Users in db
+            </summary>
+            <returns>Task with all data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.AddAsync(DesktopAppProjetLogiciel.Models.User)">
+            <summary>
+            This method create an entity from table Users in db them
+            </summary>
+            <param name="user">user to create</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.FindByIdAsync(System.Int32)">
+            <summary>
+            This search data from table Users in db with id
+            </summary>
+            <param name="id">id of searched user</param>
+            <returns>Task with found data because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.Update(DesktopAppProjetLogiciel.Models.User)">
+            <summary>
+            This method update an entity from table Users in db them
+            </summary>
+            <param name="user">user to update</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.Remove(DesktopAppProjetLogiciel.Models.User)">
+            <summary>
+            This method remove an entity from table Users in db
+            </summary>
+            <param name="user">user to delete</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.FindByName(System.String)">
+            <summary>
+            This search data from table Users in db with name
+            </summary>
+            <param name="name">name of searched user</param>
+            <returns>List with all data return by the db</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.FindByEmail(System.String)">
+            <summary>
+            This search data from table Users in db with email
+            </summary>
+            <param name="email">email of searched user</param>
+            <returns>List with all data return by the db</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Persistence.Repositories.UserRepository.track(System.Collections.Generic.List{DesktopAppProjetLogiciel.Models.User})">
+            <summary>
+            This method track data from table Users in db
+            </summary>
+            <param name="users">List of User</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:DesktopAppProjetLogiciel.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:DesktopAppProjetLogiciel.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:DesktopAppProjetLogiciel.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Communication.CityResponse.#ctor(DesktopAppProjetLogiciel.Models.City)">
+            <summary>
+            Create a success response.
+            </summary>
+            <param name="city">Saved extraction</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Communication.CityResponse.#ctor(System.String)">
+            <summary>
+            Create an error response.
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Communication.RoleResponse.#ctor(DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            Create a success response.
+            </summary>
+            <param name="role">Saved extraction</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Communication.RoleResponse.#ctor(System.String)">
+            <summary>
+            Create an error response.
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Communication.UserResponse.#ctor(DesktopAppProjetLogiciel.Models.User)">
+            <summary>
+            Create a success response.
+            </summary>
+            <param name="user">Saved extraction</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Communication.UserResponse.#ctor(System.String)">
+            <summary>
+            Create an error response.
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.DeleteAsync(System.Int32)">
+            <summary>
+            This method remove an entity from table Cities in db and save changes
+            </summary>
+            <param name="id">id of city to delete</param>
+            <returns>Task with CityResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.FindByIdAsync(System.Int32)">
+            <summary>
+            This method get an entity from table Cities in db
+            </summary>
+            <param name="id">cp of city to find</param>
+            <returns>Task with CityResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.ListAsync">
+            <summary>
+            This method list all entity from table Cities in db
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.SaveAsync(DesktopAppProjetLogiciel.Models.City)">
+            <summary>
+            This method create an entity from table Cities in db and save changes
+            </summary>
+            <param name="city">city to create</param>
+            <returns>Task with CityResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.UpdateAsync(System.Int32,DesktopAppProjetLogiciel.Models.City)">
+            <summary>
+            This method update an entity from table Cities in db and save changes
+            </summary>
+            <param name="id">cp of city to update</param>
+            <param name="city">city infos to update</param>
+            <returns>Task with CityResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.FindByCityName(System.String)">
+            <summary>
+            This method get an entity from table Cities in db with city name
+            </summary>
+            <param name="cityName">name of city to find</param>
+            <returns>CityResponse</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.CityService.ListAsyncWithTracking">
+            <summary>
+            This method list all entity from table Roles in db and track them
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.RoleService.DeleteAsync(System.String)">
+            <summary>
+            This method remove an entity from table Roles in db and save changes
+            </summary>
+            <param name="id">id of role to delete</param>
+            <returns>Task with RoleResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.RoleService.FindByIdAsync(System.String)">
+            <summary>
+            This method get an entity from table Users in db
+            </summary>
+            <param name="id">id of role to find</param>
+            <returns>Task with RoleResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.RoleService.ListAsync">
+            <summary>
+            This method list all entity from table Roles in db
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.RoleService.SaveAsync(DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            This method create an entity from table Roles in db and save changes
+            </summary>
+            <param name="role">role to create</param>
+            <returns>Task with RoleResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.RoleService.UpdateAsync(System.String,DesktopAppProjetLogiciel.Models.Role)">
+            <summary>
+            This method update an entity from table Roles in db and save changes
+            </summary>
+            <param name="id">id of user to update</param>
+            <param name="role">role infos to update</param>
+            <returns>Task with RoleResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.DeleteAsync(System.Int32)">
+            <summary>
+            This method remove an entity from table Users in db and save changes
+            </summary>
+            <param name="id">id of user to delete</param>
+            <returns>Task with UserResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.FindByIdAsync(System.Int32)">
+            <summary>
+            This method get an entity from table Users in db
+            </summary>
+            <param name="id">id of user to find</param>
+            <returns>Task with UserResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.ListAsync">
+            <summary>
+            This method list all entity from table Users in db
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.SaveAsync(DesktopAppProjetLogiciel.Models.User)">
+            <summary>
+            This method create an entity from table Users in db and save changes
+            </summary>
+            <param name="user">user to create</param>
+            <returns>Task with UserResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.UpdateAsync(System.Int32,DesktopAppProjetLogiciel.Models.User)">
+            <summary>
+            This method update an entity from table Users in db and save changes
+            </summary>
+            <param name="id">id of user to update</param>
+            <param name="user">user infos to update</param>
+            <returns>Task with UserResponse because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.FindByEmail(System.String)">
+            <summary>
+            This method get an entity from table Users in db with email
+            </summary>
+            <param name="email">email of user to find</param>
+            <returns>UserResponse</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Services.Services.UserService.ListAsyncWithTracking">
+            <summary>
+            This method list all entity from table Users in db and track them
+            </summary>
+            <returns>Task with all data found because it is asynchronous</returns>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.CityForm.CityCancelButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method dispose the form
+            It is called when user press the cancel button
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.CityForm.CityValidButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method call methode to update or create a city the form
+            It is called when user press the valid button
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.CityForm.CityCityName_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            This method write the correct city cp when a city name is choose
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.CityForm.CityCP_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            This method write the correct city name when a city cp is choose
+            </summary>
+        </member>
+        <member name="F:DesktopAppProjetLogiciel.Views.CityForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.CityForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.CityForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.LoginForm.LoginValid_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method call methode to check the login of the user
+            It is called when user press the valid button
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.LoginForm.checkLogin(System.String,System.String)">
+            <summary>
+            This method call methode to check the login of the user and show the menu form if the login is correct
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.LoginForm.LoginForm_closing(System.Object,System.EventArgs)">
+            <summary>
+            This method dispose the form
+            It is called when user press the cancel button
+            </summary>
+        </member>
+        <member name="F:DesktopAppProjetLogiciel.Views.LoginForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.LoginForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.LoginForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.PopulateDataGridView(System.Object,System.EventArgs)">
+            <summary>
+            This method refresh the data grid view
+            It is called when user or app activate the form
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.MenuUsers_CellContentDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            This method call the EditUser method
+            It is called when user double click then click on edit
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.ContextMenuEdit_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method call the EditUser method
+            It is called when user right click then click on edit
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.ContextMenuAddUser_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method open the user details form
+            It is called when user right click and click on add then user
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.ContextMenuAddRole_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method open the role form
+            It is called when user right click and click on add then role
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.ContextMenuAddCity_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method open the city form
+            It is called when user right click and click on add then city
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.ContextMenuDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method call methode to delete a user
+            It is called when user right click and click on delete
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.EditUser">
+            <summary>
+            This method open the user details form
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.MenuForm_closing(System.Object,System.EventArgs)">
+            <summary>
+            This method close the city form
+            It is called when user close this form
+            </summary>
+        </member>
+        <member name="F:DesktopAppProjetLogiciel.Views.MenuForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.MenuForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.RoleForm.RoleValidButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method call methode to create a role the form
+            It is called when user press the valid button
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.RoleForm.RoleCancelButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method dispose the form
+            It is called when user press the cancel button
+            </summary>
+        </member>
+        <member name="F:DesktopAppProjetLogiciel.Views.RoleForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.RoleForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.RoleForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.UserDetailsForm.UserDetailsCancelButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method dispose the form
+            It is called when user press the cancel button
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.UserDetailsForm.UserDetailsValidButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            This method call methode to update or create a user the form
+            It is called when user press the valid button
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.UserDetailsForm.UserDetailsDetailsCP_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            This method write the correct city name when a city cp is choose
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.UserDetailsForm.UserDetailsDetailsCity_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            This method write the correct city cp when a city name is choose
+            </summary>
+        </member>
+        <member name="F:DesktopAppProjetLogiciel.Views.UserDetailsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.UserDetailsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DesktopAppProjetLogiciel.Views.UserDetailsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
