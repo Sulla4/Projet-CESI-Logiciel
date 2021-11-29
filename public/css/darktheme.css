@@ -1,0 +1,28 @@
+body {
+    background-color: #36393f !important;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    color: white;
+}
+
+.bm-burger-bars{
+    background-color: white;
+}
+
+#themeButton{
+    background-color: white;
+    color: #36393f;
+}
+
+.logo {
+    background-image: url("https://imgur.com/jr1w0fj.png") !important;
+}
+
+.search {
+    background-color: #36393f !important;
+}
+
+.container--restaurant--search:hover {
+    background-color: #43464c !important;
+}
